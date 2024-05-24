@@ -25,7 +25,7 @@ public static void main(String[] args) {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1 -> {
@@ -33,7 +33,7 @@ public static void main(String[] args) {
                     String name = scanner.nextLine();
                     System.out.print("Enter roll number: ");
                     int rollNumber = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine(); 
                     System.out.print("Enter grade: ");
                     String grade = scanner.nextLine();
                     system.addStudent(new Student(name, rollNumber, grade));
@@ -42,14 +42,14 @@ public static void main(String[] args) {
                 case 2 -> {
                     System.out.print("Enter roll number to remove: ");
                     int rollToRemove = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
                     system.removeStudent(rollToRemove);
                     System.out.println("Student removed successfully!");
                 }
                 case 3 -> {
                     System.out.print("Enter roll number to search: ");
                     int rollToSearch = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
                     Student foundStudent = system.searchStudent(rollToSearch);
                     if (foundStudent != null) {
                         System.out.println("Student found: " + foundStudent);
